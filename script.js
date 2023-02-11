@@ -12,7 +12,7 @@ let options = {
     getSearch(page).then(res => {
         renderCard(res.results);
         if(res.info.pages === page){
-            loadMoreBtn.hidden = true;
+            // loadMoreBtn.hidden = true;
             observer.unobserve(target);
             return;
         }
@@ -41,8 +41,8 @@ async function getSearch(){
 }
 
 getSearch().then((res) => {
-    // console.log(res)
-    // if (res.info <= )
+     console.log(res)
+   
     renderCard(res.results)
     console.log()
 
